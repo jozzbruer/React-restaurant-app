@@ -17,7 +17,7 @@ function Navbar() {
 }
 
 const Nav = styled.nav `
-    background: red;
+    background: transparent;
     height: 88px;
     display: flex;
     justify-content: center;
