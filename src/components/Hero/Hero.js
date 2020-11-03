@@ -1,11 +1,20 @@
 import styled from 'styled-components'
 import Navbar from '../Navbar/Navbar'
 import ImgBg from '../../images/pizza-3.jpg'
+import Sidebar from '../Sidbar/Sidebar'
+import { useState } from 'react'
 
 function Hero() {
+
+    const [isOpen, setIsOpen] = useState(false)
+
+    function togglebtn(){
+        setIsOpen(!isOpen)
+    }
     return (
         <HeroContainer>
-            <Navbar />
+            <Navbar toggle={togglebtn} />
+            <Sidebar isOpen={isOpen} toggle={togglebtn}/>
             <HeroContent>
                 <HeroItems>
                     <HeroH1>Greatest Pizza Ever</HeroH1>

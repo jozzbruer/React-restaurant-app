@@ -2,12 +2,14 @@ import styled from 'styled-components'
 import { NavLink as Link } from 'react-router-dom'
 import { FaPizzaSlice } from 'react-icons/fa'
 
-function Navbar() {
+
+function Navbar(props) {
+    
     return (
         <>
            <Nav>
                <NavLink to='/'>Pizza</NavLink>
-               <NavIcon>
+               <NavIcon onClick={props.toggle}>
                    <p>Menu</p>
                    <Bars />
                </NavIcon>
