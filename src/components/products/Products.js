@@ -1,12 +1,11 @@
 import styled from 'styled-components';
-import {productData} from './data'
 
 function Products(props) {
     return (
         <ProductsContainer>
       <ProductsHeading>{props.heading}</ProductsHeading>
       <ProductWrapper>
-        {productData.map((product) => {
+        {props.data.map((product) => {
           return (
             <ProductCard key={product.id}>
               <ProductImg src={product.img} alt={product.alt} />
